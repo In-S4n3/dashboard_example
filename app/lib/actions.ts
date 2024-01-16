@@ -3,8 +3,9 @@ import prisma from '../lib/prisma';
 import { z } from 'zod';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
-import { signIn } from 'next-auth/react';
+
 import { AuthError } from 'next-auth';
+import { signIn } from '@/auth';
 
 const FormSchema = z.object({
   id: z.string(),
